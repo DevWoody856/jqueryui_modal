@@ -1,0 +1,37 @@
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+}
+
+.button{
+    width: 100vw;
+    height: auto;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.button__title{
+    width: auto;
+    margin: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__area{
+    width: auto;
+    margin: 2rem;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.button__click{
+    width: 4rem;
+    height: 2rem;
+}
+

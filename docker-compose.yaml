@@ -1,0 +1,25 @@
+version: "3.9"
+services:
+  backend:
+    container_name: modal_220321
+    build: .
+    volumes:
+      - .:/modal_220321
+    ports:
+      - 8002:8002
+    depends_on:
+      - db_modal_220321
+
+  db_modal_220321:
+    container_name: db_modal_220321
+    image: postgres
+    restart: always
+    volumes:
+      - .dbdata:/var/lib/db_modal_220321
+    ports:
+      - 5461:5432
+
+    environment:
+      - POSTGRES_DB=${POSTGRES_DB}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
