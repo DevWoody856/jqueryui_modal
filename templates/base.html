@@ -1,5 +1,4 @@
 {% load static %}
-<!doctype html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -16,6 +15,10 @@
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="https://code.jquery.com/ui/1.13.1/jquery-ui.min.js" integrity="sha256-eTyxS0rkjpLEo16uXTS0uVCS4815lc40K2iVpWDvdSY=" crossorigin="anonymous"></script>
-    {% include "app/js_code.html" %}
+    <script>
+        const formTestURL = "{% url 'app:form_test' %}";
+        const csrftoken = '{{ csrf_token }}';
+    </script>
+    <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>
